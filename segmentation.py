@@ -394,7 +394,7 @@ def preprocess_rgb(x):
     diff_max = tf.reduce_max(diff, axis=[1, 2], keepdims=True)
     diff_norm = (diff - diff_min) / (diff_max - diff_min + 1e-6) * 255.0
 
-    binary = tf.where(diff_norm > 125.0, 1.0, 0.0)
+    binary = tf.where(diff_norm > 90.0, 1.0, 0.0)
 
     binary_4D = binary
     sobel = tf.image.sobel_edges(binary_4D)
