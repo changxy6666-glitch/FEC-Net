@@ -385,7 +385,7 @@ def conv_block(
     return layer
 
 
-def preprocess_rgb(x):
+def FEEM(x):
     R = x[..., 0:1]
     B = x[..., 2:3]
     diff = R - B
@@ -470,7 +470,7 @@ def MEA_Block(edge_feat, main_feat, filters):
 def model_unet_kaggle(img_height, img_width, img_channel, num_classes):
     inputs = Input((img_height, img_width, img_channel))
 
-    s = Lambda(preprocess_rgb, name="sobel_preprocess")(inputs)
+    s = Lambda(FEEM, name="sobel_preprocess")(inputs)
     edge_input = Conv2D(32, (3, 3), padding="same")(s)
 
     norm_inputs = Lambda(lambda x: x / 255.0)(inputs)
