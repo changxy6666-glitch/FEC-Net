@@ -1,0 +1,20 @@
+# FEC-Net: Flame Edge Compensation Network for Forest Fire Detection
+
+[![TensorFlow 2.3.0](https://img.shields.io/badge/TensorFlow-2.3.0-FF6F00?logo=tensorflow)](https://www.tensorflow.org/)
+[![Keras 2.4.0](https://img.shields.io/badge/Keras-2.4.0-D00000?logo=keras)](https://keras.io/)
+[![Python 3.x](https://img.shields.io/badge/Python-3.x-3776AB?logo=python)](https://www.python.org/)
+
+This repository contains the official implementation of the paper: **"[Your Paper Title Here]"**. 
+
+FEC-Net is a novel deep learning architecture designed for UAV-based forest fire segmentation. It effectively addresses the issues of edge degradation and blurring caused by complex background interference and continuous downsampling operations.
+
+## 🚀 Key Highlights
+
+*   **Flame Edge Extraction Module (FEEM):** Suppresses background interference via spectral differences and extracts coarse-grained flame contours.
+*   **Multi-level Edge Aggregation Block (MEA):** Refines edges through semantic gating mechanisms and residual networks.
+*   **Horizontal-Vertical Dual-direction Attention (HVD):** Enhances the interaction fusion of deep and shallow features using orthogonal direction perception.
+*   **Custom Loss Function:** Employs a combination of Edge-weighted BCE and Dice Loss for precise boundary segmentation.
+
+## 🛠️ Environment Setup
+
+The code has been tested on RTX 3080 GPUs**.
