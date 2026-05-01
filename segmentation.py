@@ -861,14 +861,14 @@ def segmentation_keras_load():
     num_classes = config_segmentation.get("num_class")
 
     # -------- menu save--------
-    train_img_dir = r"D:\Drone\autumn Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\frames\Segmentation\train\Images"
-    train_mask_dir = r"D:\Drone\autumn Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\frames\Segmentation\train\Masks"
+    train_img_dir = r"your train image address"
+    train_mask_dir = r"your train  mask address"
 
-    val_img_dir = r"D:\Drone\autumn Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\frames\Segmentation\val\Images"
-    val_mask_dir = r"D:\Drone\autumn Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\frames\Segmentation\val\Masks"
+    val_img_dir = r"your val image address"
+    val_mask_dir = r"your val mask address"
 
-    test_img_dir = r"D:\Drone\autumn Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\frames\Segmentation\test\Images"
-    test_mask_dir = r"D:\Drone\autumn Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\frames\Segmentation\test\Masks"
+    test_img_dir = r"your test image address"
+    test_mask_dir = r"your test mask address"
 
     # --------  Train / Val / Test --------
     x_train, y_train, train_mask_names = load_dataset(
@@ -942,7 +942,7 @@ def segmentation_keras_load():
         compile=False,
     )
 
-    output_root = r"D:\Drone\autumn Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\Fire-Detection-UAV-Aerial-Image-Classification-Segmentation-UnmannedAerialVehicle-main\Output\SegmentationResults\u3u"
+    output_root = r""
     os.makedirs(output_root, exist_ok=True)
     curve_save_dir = os.path.join(output_root, "training_curves")
 
